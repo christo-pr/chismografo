@@ -1,0 +1,9 @@
+# IF THERE'S A GIT CONFLICT IN THIS FILE, DON'T SOLVE IT MANUALLY!
+# INSTEAD EXECUTE `prisma2 migrate fix`
+# Prisma Migrate lockfile v1
+# Read more about conflict resolution here: TODO
+
+20200325213041-create_user_model
+20200325213225-create_books_model
+20200325213424-create_question_model
+20200325213854-create_answer_model
