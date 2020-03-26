@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url = env("DATABASE_URL")
+  url = "***"
 }
 
 generator photonjs {
@@ -26,15 +26,6 @@ model Book {
   name  String
   code  String  @default(cuid())
   owner User
-  questions Question[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model Question {
-  id    Int     @id @default(autoincrement())
-  query String
-  book Book
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
