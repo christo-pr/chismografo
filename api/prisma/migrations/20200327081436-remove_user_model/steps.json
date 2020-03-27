@@ -1,0 +1,33 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteModel",
+      "model": "User"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Book",
+      "field": "name"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Book",
+      "field": "owner",
+      "type": "String"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Answer",
+      "field": "gender",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Answer",
+      "field": "replier",
+      "type": "String"
+    }
+  ]
+}
