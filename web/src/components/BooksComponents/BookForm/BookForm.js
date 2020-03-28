@@ -8,12 +8,10 @@ import {
 } from '@redwoodjs/web'
 
 const CSS = {
-  label: 'block mt-6 text-gray-700 font-semibold',
+  label: '',
   labelError: 'block mt-6 font-semibold text-red-700',
-  input:
-    'block mt-2 w-full p-2 border border-gray-300 text-gray-700 rounded focus:outline-none focus:border-gray-500',
-  inputError:
-    'block mt-2 w-full p-2 border border-red-700 text-red-900 rounded focus:outline-none',
+  input: 'uk-input',
+  inputError: 'uk-form-danger',
   errorMessage: 'block mt-1 font-semibold uppercase text-xs text-red-700',
 }
 
@@ -23,38 +21,41 @@ const BookForm = (props) => {
   }
 
   return (
-    <div className="text-sm -mt-4">
-      <Form onSubmit={onSubmit} error={props.error}>
-        <FormError
-          error={props.error}
-          wrapperClassName="p-4 bg-red-100 text-red-700 border border-red-300 rounded mb-4"
-          titleClassName="font-semibold"
-          listClassName="mt-2 list-disc list-inside"
-        />
+    <div className="uk-flex uk-flex-center">
+      <div className="uk-width-5-6">
+        <Form onSubmit={onSubmit} error={props.error}>
+          <FormError
+            error={props.error}
+            wrapperClassName="p-4 bg-red-100 text-red-700 border border-red-300 rounded mb-4"
+            titleClassName="font-semibold"
+            listClassName="mt-2 list-disc list-inside"
+          />
 
-        <Label
-          name="owner"
-          className={CSS.label}
-          errorClassName={CSS.labelError}
-        />
-        <TextField
-          name="owner"
-          defaultValue={props.book?.owner}
-          className={CSS.input}
-          errorClassName={CSS.inputError}
-          validation={{ required: true }}
-        />
-        <FieldError name="owner" className={CSS.errorMessage} />
+          <Label
+            name="Empezemos por tu nombre:"
+            className={CSS.label}
+            errorClassName={CSS.labelError}
+          />
+          <TextField
+            name="owner"
+            defaultValue={props.book?.owner}
+            placeholder="Escribe tu nombre"
+            className={CSS.input}
+            errorClassName={CSS.inputError}
+            validation={{ required: true }}
+          />
+          <FieldError name="owner" className={CSS.errorMessage} />
 
-        <div className="mt-8 text-center">
-          <Submit
-            disabled={props.loading}
-            className="bg-blue-600 text-white hover:bg-blue-700 text-xs rounded px-4 py-2 uppercase font-semibold tracking-wide"
-          >
-            Save
-          </Submit>
-        </div>
-      </Form>
+          <div className="uk-margin-top uk-flex uk-flex-center">
+            <Submit
+              disabled={props.loading}
+              className="uk-button uk-button-primary"
+            >
+              Save
+            </Submit>
+          </div>
+        </Form>
+      </div>
     </div>
   )
 }

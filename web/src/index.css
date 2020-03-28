@@ -1,1 +1,88 @@
+:root {
+  --main-bg-color: #3581B8;
+  --second-bg-color: #6CA3CB;
+}
 
+html {
+  background: var(--main-bg-color);
+}
+
+#redwood-app nav.app-navbar {
+  background: var(--main-bg-color);
+}
+
+.paper {
+  font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
+  width: 80%;
+  min-height: 80vh;
+  margin-top: 40px;
+  padding: 6px 5px 4px 60px;
+  position: relative;
+  color: #444;
+  line-height: 20px;
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  -webkit-background-size: 100% 40px;
+  -moz-background-size: 100% 40px;
+  -ms-background-size: 100% 40px;
+  -o-background-size: 100% 40px;
+  background-size: 100% 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  top: 0;
+  left: 68px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #d76a6a;
+}
+
+.paper .question-sheet {
+  padding-left: 15px;
+  counter-reset: questions-list;
+  list-style-type: none;
+  color: #ABABAB;
+}
+
+.paper .question-sheet li::before {
+  counter-increment: questions-list;
+  content: counter(questions-list) ".-";
+  position: absolute;
+  left: 0;
+}
+
+.paper .question-sheet li {
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.paper .question-sheet li:first-of-type {
+  padding-top: 6px;
+}
+
+.paper .question-sheet li p {
+  margin: 0px;
+}
+
+.head {
+  background-color: #FFF;
+  min-height: 65px;
+  margin-left: -60px;
+  margin-right: -5px;
+  margin-top: -4px;
+}

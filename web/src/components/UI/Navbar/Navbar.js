@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 
 const Navbar = (props) => {
   return (
-    <nav className="uk-navbar-container uk-margin" data-uk-navbar>
+    <nav className="uk-navbar-container uk-margin app-navbar" data-uk-navbar>
       <div className="uk-navbar-center">
         <a className="uk-navbar-item uk-logo" href="#">
           Logo

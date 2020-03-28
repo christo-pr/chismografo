@@ -1,6 +1,7 @@
 import { useMutation } from '@redwoodjs/web'
 import { navigate, routes } from '@redwoodjs/router'
 import BookForm from 'src/components/BooksComponents/BookForm'
+import PaperSheet from 'src/components/UI/PaperSheet'
 
 const CREATE_POST_MUTATION = gql`
   mutation CreateBookMutation($input: BookInput!) {
@@ -22,12 +23,10 @@ const NewBook = () => {
   }
 
   return (
-    <div className="bg-white border rounded-lg overflow-hidden">
-      <header className="bg-gray-300 text-gray-700 py-3 px-4">
-        <h2 className="text-sm font-semibold">New Book</h2>
-      </header>
-      <div className="bg-gray-100 p-4">
+    <div className="uk-padding-large uk-flex uk-flex-column uk-flex-middle">
+      <div className="uk-card uk-card-default uk-card-body uk-width-1-1 uk-card-hover">
         <BookForm onSave={onSave} loading={loading} error={error} />
+        <PaperSheet question=""/>
       </div>
     </div>
   )
