@@ -23,7 +23,7 @@ const NewBook = () => {
   }
 
   return (
-    <div className="uk-padding-large uk-flex uk-flex-column uk-flex-middle">
+    <div className="uk-flex uk-flex-column uk-flex-middle">
       <div className="uk-card uk-card-default uk-card-body uk-width-1-1 uk-card-hover">
         <BookForm onSave={onSave} loading={loading} error={error} />
         <PaperSheet question=""/>

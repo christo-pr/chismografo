@@ -51,7 +51,7 @@ const BookForm = (props) => {
               disabled={props.loading}
               className="uk-button uk-button-primary"
             >
-              Save
+              Continuar
             </Submit>
           </div>
         </Form>

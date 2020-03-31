@@ -3,6 +3,10 @@
   --second-bg-color: #6CA3CB;
 }
 
+* {
+  font-family: 'Kalam', cursive !important;
+}
+
 html {
   background: var(--main-bg-color);
 }
@@ -11,8 +15,20 @@ html {
   background: var(--main-bg-color);
 }
 
+form {
+  text-align: center;
+}
+
+form input.uk-input {
+  padding: 30px 15px;
+  font-size: 30px;
+}
+
+label {
+  font-size: 30px;
+}
+
 .paper {
-  font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
   width: 80%;
   min-height: 80vh;
   margin-top: 40px;
@@ -33,9 +49,9 @@ html {
   -ms-background-size: 100% 40px;
   -o-background-size: 100% 40px;
   background-size: 100% 40px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   box-shadow: 0 1px 2px rgba(0,0,0,0.07);
